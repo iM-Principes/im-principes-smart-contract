@@ -1,0 +1,259 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "enterprise",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "enterpriseName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "renewableEnergy",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "employeeWelfare",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "communityEngagement",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "governanceScore",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "eGrade",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "sGrade",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "gGrade",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "GradeCalculated",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "enterpriseName",
+				"type": "string"
+			},
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "renewableEnergy",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "employeeWelfare",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "communityEngagement",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "governanceScore",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct SBTGradeCalculator.Score",
+				"name": "scores",
+				"type": "tuple"
+			}
+		],
+		"name": "calculateGrade",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "enterprise",
+				"type": "address"
+			}
+		],
+		"name": "getGradeHistory",
+		"outputs": [
+			{
+				"components": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "renewableEnergy",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "employeeWelfare",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "communityEngagement",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "governanceScore",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct SBTGradeCalculator.Score",
+						"name": "scores",
+						"type": "tuple"
+					},
+					{
+						"internalType": "string",
+						"name": "enterpriseName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "eGrade",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sGrade",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "gGrade",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct SBTGradeCalculator.GradeResult[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "gradeHistory",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "renewableEnergy",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "employeeWelfare",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "communityEngagement",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "governanceScore",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct SBTGradeCalculator.Score",
+				"name": "scores",
+				"type": "tuple"
+			},
+			{
+				"internalType": "string",
+				"name": "enterpriseName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "eGrade",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "sGrade",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "gGrade",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
